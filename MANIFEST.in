@@ -1,0 +1,6 @@
+include requirements.txt
+
+recursive-include rugstk *
+recursive-include tensorflow *
+recursive-include stanza *
+recursive-include models *
