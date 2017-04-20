@@ -6,9 +6,10 @@ setup(name='color-describer',
       author='',
       author_email='',
       url='https://github.com/stanfordnlp/color-describer',
-      packages=['stanza', 'tensorflow'],
-      # package_dir = {'': ''},
+      packages=['stanza', 'stanza.research', 'stanza.monitoring', 
+      'tensorflow', 'tensorflow.core', 'tensorflow.core.util', 'tensorflow.core.framework',
+      'models', 
+      'rugstk', 'rugstk.core', 'rugstk.data', 'rugstk.data.munroecorpus'],
+      package_data={'models': ['lstm_fourier_quick.p']},
       py_modules=['colordesc', 'colorutils', 'speaker', 'vectorizers'],
-      # data_files=[('rugstk', ['rugstk/example.py'])]
-      # package_data={'': ['stanza', 'tensorflow', 'thirdparty/*', 'rugstk/*']}
 )

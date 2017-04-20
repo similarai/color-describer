@@ -1,3 +1,4 @@
+import os
 import cPickle as pickle
 import theano  # NOQA: for doctest (get that dot_parser warning out of the way with)
 
@@ -19,7 +20,7 @@ class ColorDescriber(object):
             experiment-produced pickle files).
         '''
         if picklefile is None:
-            with open('models/lstm_fourier_quick.p', 'rb') as infile:
+            with open(os.path.join(os.path.dirname(__file__), 'models', 'lstm_fourier_quick.p'), 'rb') as infile:
                 self.model = pickle.load(infile)
         else:
             self.model = pickle.load(picklefile)
